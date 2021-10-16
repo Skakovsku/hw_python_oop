@@ -64,7 +64,7 @@ class CashCalculator(Calculator):
         day_amount = self.get_today_stats()
         rate, valuta = [self.currencies[currency][1],
                         self.currencies[currency][0]]
-        converted_rate = round((self.limit - day_amount)/rate, 2)
+        converted_rate = round((self.limit - day_amount) / rate, 2)
         duty = - converted_rate
         if self.limit > day_amount:
             answer = f'На сегодня осталось {converted_rate} {valuta}'
