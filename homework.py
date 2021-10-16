@@ -26,7 +26,7 @@ class Record:
 class Calculator:
     def __init__(self, limit: float):
         self.limit = limit
-        self.records = []
+        self.records: list = []
 
     def add_record(self, record: Record) -> None:
         """Создание записи о денежной трате."""
