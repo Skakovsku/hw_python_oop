@@ -65,7 +65,7 @@ class CashCalculator(Calculator):
         rate, valuta = [self.currencies[currency][1],
                         self.currencies[currency][0]]
         converted_rate = round((self.limit - day_amount)/rate, 2)
-        duty = -converted_rate
+        duty = - converted_rate
         if self.limit > day_amount:
             answer = f'На сегодня осталось {converted_rate} {valuta}'
         elif self.limit == day_amount:
@@ -84,7 +84,3 @@ class CaloriesCalculator(Calculator):
             return ('Сегодня можно съесть что-нибудь ещё, '
                     f'но с общей калорийностью не более {day_amount} кКал')
         return 'Хватит есть!'
-
-# Привет! Не стал писать в Slack, из-за позднего времени. С общением всё
-# удобно и нормально. Замечания понятны. Единственный момент: я раньше не
-# встречал фразу "Вынести из кода", но понял её так как сделал в своём коде.
